@@ -1,0 +1,20 @@
+---
+apiVersion: flux.weave.works/v1beta1
+kind: HelmRelease
+metadata:
+  name: echo-production
+  namespace: production
+  annotations:
+    flux.weave.works/automated: "true"
+    flux.weave.works/tag.chart-image: semver:~1.0
+spec:
+  releaseName: echo-production
+  chart:
+    git: git@github.com:tomikonio/gitops
+    path: helm-charts/echo
+    ref: master
+  values:
+    image: shukiyahu/echo_ex:1.0.23
+    replicaCount: 1
+    name: echo-production
+    namespace: production
