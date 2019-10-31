@@ -10,7 +10,7 @@ metadata:
 spec:
   releaseName: echo-production
   chart:
-    git: git@github.com:tomikonio/gitops
+    git: git@github.com:kobideveleap/gitops
     path: helm-charts/echo
     ref: master
   values:
