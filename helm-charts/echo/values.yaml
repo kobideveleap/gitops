@@ -2,17 +2,16 @@
 # # This is a YAML-formatted file.
 # # Declare variables to be passed into your templates.
 
-image: shukiyahu/echo_ex:1.0.18
+image: eu.gcr.io/first-k8s-project-256708/echoapp:1.0.27
 replicaCount: 1
 name: echo
 namespace: masterion
 
 data:
-    port: '"MzAwMA=="'
-    loglevel: '"ZGVidWc="'
-    persist: '"dHJ1ZQ=="'
-    mongodburl: '"bW9uZ29kYjovL2VjaG86bXlwYXNzd29yZEBtb25nby1tb25nb2RiLmRlZmF1bHQuc3ZjLmNsdXN0
-ZXIubG9jYWw6MjcwMTcvZWNobw=="'
+    port: "3000"
+    loglevel: "debug"
+    persist: "true"
+    mongodburl: mongodb://echo:mypassword@mongo-mongodb.default.svc.cluster.local:27017/echo"
 
 # image:
 #   repository: nginx
