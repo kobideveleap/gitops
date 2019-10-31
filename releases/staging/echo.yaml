@@ -10,11 +10,11 @@ metadata:
 spec:
   releaseName: echo-staging
   chart:
-    git: git@github.com:tomikonio/gitops
+    git: git@github.com:kobideveleap/gitops
     path: helm-charts/echo
     ref: master
   values:
-    image: shukiyahu/echo_ex:staging-44658b37e5adec20fdaa35b1ad7e0fa6bb02a4bc
+    image: eu.gcr.io/first-k8s-project-256708/echoapp:1.0.27
     replicaCount: 1
     name: echo-staging
     namespace: staging

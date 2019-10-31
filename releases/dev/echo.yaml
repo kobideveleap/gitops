@@ -10,11 +10,11 @@ metadata:
 spec:
   releaseName: echo-dev
   chart:
-    git: git@github.com:tomikonio/gitops
+    git: git@github.com:kobideveleap/gitops
     path: helm-charts/echo
     ref: master
   values:
-    image: shukiyahu/echo_ex:dev-71580df2cfbb28f1ecad9746972a61114ab0bb78
+    image: eu.gcr.io/first-k8s-project-256708/echoapp:1.0.27
     replicaCount: 1
     name: echo-dev
     namespace: dev
