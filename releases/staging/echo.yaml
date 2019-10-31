@@ -18,3 +18,5 @@ spec:
     replicaCount: 1
     name: echo-staging
     namespace: staging
+    data:
+      mongodburl: "mongodb://echo:mypassword@mongodb.default.svc.cluster.local:27017/echo-staging"
